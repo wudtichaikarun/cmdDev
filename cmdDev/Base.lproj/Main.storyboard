@@ -378,6 +378,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnRegisterClick:" destination="av8-x3-IUJ" eventType="touchUpInside" id="ZYP-2L-KP6"/>
+                                    <action selector="chooseImg:" destination="1kw-kI-fT6" eventType="touchUpInside" id="yGL-Gx-tbc"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="aXf-7f-8eD">
@@ -398,6 +399,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnRegisterClick:" destination="1kw-kI-fT6" eventType="touchUpInside" id="QeO-y0-zoW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -419,6 +423,10 @@
                         <viewLayoutGuide key="safeArea" id="tvf-kk-ftv"/>
                     </view>
                     <connections>
+                        <outlet property="emailText" destination="sgF-Wb-tVP" id="vgw-Bf-lvw"/>
+                        <outlet property="passwordText" destination="uOJ-vU-pVq" id="Ssh-y1-E5R"/>
+                        <outlet property="profileImg" destination="aXf-7f-8eD" id="qtc-zm-YIb"/>
+                        <outlet property="userNameText" destination="PTf-bJ-02A" id="x02-R9-Lhd"/>
                         <segue destination="5qU-Rs-Qwl" kind="unwind" identifier="unwindToNav" unwindAction="prepareForUnwindWithSegue:" id="XPF-b7-RG2"/>
                     </connections>
                 </viewController>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		042EA0DD1FE059D3009B66A0 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */; };
+		042EA0E01FE089F7009B66A0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0DF1FE089F7009B66A0 /* AuthService.swift */; };
+		042EA0E21FE0948A009B66A0 /* ButtonRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */; };
 		044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CB1FE042E100690401 /* AppDelegate.swift */; };
 		044EA5CE1FE042E100690401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CD1FE042E100690401 /* ViewController.swift */; };
 		044EA5D11FE042E100690401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044EA5CF1FE042E100690401 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		042EA0DF1FE089F7009B66A0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRadius.swift; sourceTree = "<group>"; };
 		044EA5C81FE042E100690401 /* cmdDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cmdDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044EA5CB1FE042E100690401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044EA5CD1FE042E100690401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042EA0DE1FE089D0009B66A0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				042EA0DF1FE089F7009B66A0 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		044EA5BF1FE042E100690401 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +89,7 @@
 		044EA5CA1FE042E100690401 /* cmdDev */ = {
 			isa = PBXGroup;
 			children = (
+				042EA0DE1FE089D0009B66A0 /* Services */,
 				044EA5EC1FE050E900690401 /* Utilities */,
 				044EA5E71FE048B400690401 /* View */,
 				044EA5E21FE044ED00690401 /* Controller */,
@@ -116,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				044EA5E81FE048DB00690401 /* GradientView.swift */,
+				042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,8 +288,10 @@
 				044EA5EB1FE04F3C00690401 /* LoginVC.swift in Sources */,
 				044EA5E91FE048DB00690401 /* GradientView.swift in Sources */,
 				044EA5E41FE0450400690401 /* mainVC.swift in Sources */,
+				042EA0E21FE0948A009B66A0 /* ButtonRadius.swift in Sources */,
 				044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */,
 				042EA0DD1FE059D3009B66A0 /* RegisterVC.swift in Sources */,
+				042EA0E01FE089F7009B66A0 /* AuthService.swift in Sources */,
 				044EA5E11FE0445F00690401 /* SWRevealViewController.m in Sources */,
 				044EA5EE1FE0511400690401 /* Constants.swift in Sources */,
 			);
