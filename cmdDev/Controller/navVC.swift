@@ -10,9 +10,16 @@ import UIKit
 
 class navVC: UIViewController {
 
+  @IBOutlet weak var btnLogin: UIButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
   }
 
+  @IBAction func btnLoginClick(_ sender: Any) {
+    performSegue(withIdentifier: ToLogin, sender: nil)
+  }
+  
+  
 }
