@@ -41,11 +41,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7l-Ux-kHk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7l-Ux-kHk" customClass="GradientView" customModule="cmdDev" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPi-mQ-zhX">
-                                        <rect key="frame" x="12" y="30" width="24" height="18"/>
+                                        <rect key="frame" x="12" y="47" width="24" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="ODq-aH-sGp"/>
                                             <constraint firstAttribute="height" constant="18" id="fKv-Ae-jTh"/>
@@ -53,7 +53,7 @@
                                         <state key="normal" image="smackBurger"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CmdDev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hj0-fv-fc9">
-                                        <rect key="frame" x="152" y="28.5" width="70" height="21"/>
+                                        <rect key="frame" x="152" y="45.5" width="70" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                     <constraint firstItem="FPi-mQ-zhX" firstAttribute="leading" secondItem="O7l-Ux-kHk" secondAttribute="leading" constant="12" id="0tx-xI-whc"/>
                                     <constraint firstItem="Hj0-fv-fc9" firstAttribute="centerY" secondItem="FPi-mQ-zhX" secondAttribute="centerY" id="7L0-pW-9ZX"/>
                                     <constraint firstItem="Hj0-fv-fc9" firstAttribute="centerX" secondItem="O7l-Ux-kHk" secondAttribute="centerX" id="8gh-lJ-vSu"/>
-                                    <constraint firstAttribute="height" constant="60" id="TdV-nn-H5R"/>
+                                    <constraint firstAttribute="height" constant="77" id="TdV-nn-H5R"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -89,7 +89,7 @@
         <scene sceneID="asd-oZ-8DX">
             <objects>
                 <viewController id="bth-W7-Bu6" customClass="navVC" customModule="cmdDev" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cfR-EJ-oec">
+                    <view key="view" contentMode="scaleToFill" id="cfR-EJ-oec" customClass="GradientView" customModule="cmdDev" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
