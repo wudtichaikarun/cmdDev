@@ -10,3 +10,5 @@ import Foundation
 
 // segues
 let ToLogin = "toLogin"
+let ToRegister = "toRegister"
+let Unwind = "unwindToNav"

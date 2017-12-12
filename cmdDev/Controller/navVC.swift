@@ -11,6 +11,7 @@ import UIKit
 class navVC: UIViewController {
 
   @IBOutlet weak var btnLogin: UIButton!
+  @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
   
   override func viewDidLoad() {
     super.viewDidLoad()
