@@ -20,6 +20,7 @@ let USER_ADD_URL = "\(BASE_URL)user/add"
 let ToLogin = "toLogin"
 let ToRegister = "toRegister"
 let Unwind = "unwindToNav"
+let ToImagePicker = "toImagePicker"
 
 // user defalts
 let TOKEN_KEY = "token"

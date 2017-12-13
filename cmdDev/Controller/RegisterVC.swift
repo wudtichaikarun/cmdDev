@@ -30,6 +30,7 @@ class RegisterVC: UIViewController {
   }
   
   @IBAction func chooseImg(_ sender: Any) {
+    performSegue(withIdentifier: ToImagePicker, sender: nil)
   }
   
   @IBAction func btnRegisterClick(_ sender: Any) {
