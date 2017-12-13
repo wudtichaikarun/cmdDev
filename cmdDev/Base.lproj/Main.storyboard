@@ -209,7 +209,7 @@
                                     <constraint firstAttribute="height" constant="50" id="tJl-xW-5db"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -217,6 +217,9 @@
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="BtnLoginClick:" destination="av8-x3-IUJ" eventType="touchUpInside" id="lYO-Xv-0Hy"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Mzj-eA-DV5">
                                 <rect key="frame" x="62.5" y="143" width="250" height="86"/>
@@ -271,6 +274,10 @@
                                     <action selector="btnRegisterClick:" destination="av8-x3-IUJ" eventType="touchUpInside" id="ZMw-MA-Y7I"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Blp-vU-Kfu">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -280,6 +287,8 @@
                             <constraint firstItem="aPh-SF-WyM" firstAttribute="top" secondItem="Mzj-eA-DV5" secondAttribute="bottom" constant="40" id="VyK-9v-vnp"/>
                             <constraint firstItem="vWZ-Ux-s4u" firstAttribute="centerX" secondItem="ky7-hl-DNm" secondAttribute="centerX" id="XvN-YT-ctr"/>
                             <constraint firstItem="BU4-4e-QPX" firstAttribute="centerX" secondItem="ky7-hl-DNm" secondAttribute="centerX" id="Y9q-bE-1f5"/>
+                            <constraint firstItem="Blp-vU-Kfu" firstAttribute="centerX" secondItem="ky7-hl-DNm" secondAttribute="centerX" id="Z15-c3-f53"/>
+                            <constraint firstItem="Blp-vU-Kfu" firstAttribute="centerY" secondItem="ky7-hl-DNm" secondAttribute="centerY" constant="-100" id="cmp-Ml-z4m"/>
                             <constraint firstItem="Mzj-eA-DV5" firstAttribute="top" secondItem="BU4-4e-QPX" secondAttribute="bottom" constant="40" id="gaZ-jZ-P5J"/>
                             <constraint firstItem="Vi2-qx-DhO" firstAttribute="trailing" secondItem="6np-qn-1PX" secondAttribute="trailing" constant="16" id="hqY-Fz-9Jv"/>
                             <constraint firstItem="6np-qn-1PX" firstAttribute="top" secondItem="Vi2-qx-DhO" secondAttribute="top" constant="15" id="sQH-SS-UUT"/>
@@ -288,6 +297,9 @@
                         <viewLayoutGuide key="safeArea" id="Vi2-qx-DhO"/>
                     </view>
                     <connections>
+                        <outlet property="passwordText" destination="dJ6-Ts-LRf" id="pIo-XM-lyH"/>
+                        <outlet property="spinner" destination="Blp-vU-Kfu" id="XW0-SA-Q0e"/>
+                        <outlet property="userNameText" destination="FYP-LS-JYZ" id="12H-e1-Wfx"/>
                         <segue destination="1kw-kI-fT6" kind="show" identifier="toRegister" id="zaX-Df-HK9"/>
                     </connections>
                 </viewController>

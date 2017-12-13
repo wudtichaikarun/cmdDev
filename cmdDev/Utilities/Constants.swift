@@ -15,6 +15,7 @@ let BASE_URL = "https://cmddev.herokuapp.com/v1/"
 let REGISTER_URL = "\(BASE_URL)account/register"
 let LOGIN_URL = "\(BASE_URL)account/login"
 let USER_ADD_URL = "\(BASE_URL)user/add"
+let USER_BY_EMAIL_URL = "\(BASE_URL)user/byEmail/"
 
 // segues
 let ToLogin = "toLogin"
@@ -32,5 +33,9 @@ let NOTIF_USER_DATA_CHANGE = Notification.Name("notifUserDataChange")
 
 // http header
 let HTTP_HEADER = [
+  "Content-Type": "application/json; charset=utf-8"
+]
+let HEADER_WITH_TOKEN = [
+  "Authorization": "Bearer \(AuthService.instance.authToken)",
   "Content-Type": "application/json; charset=utf-8"
 ]

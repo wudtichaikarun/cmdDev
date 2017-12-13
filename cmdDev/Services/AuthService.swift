@@ -124,35 +124,36 @@ class AuthService {
       "avatarColor" : imgColor
     ]
     
-    let headerWithToken = [
-      "Authorization": "Bearer \(AuthService.instance.authToken)",
-       "Content-Type": "application/json; charset=utf-8"
-    ]
-    
     Alamofire.request(
       USER_ADD_URL,
       method: .post,
       parameters: body,
       encoding: JSONEncoding.default,
-      headers: headerWithToken
+      headers: HEADER_WITH_TOKEN
       ).responseJSON { (response) in
         if response.result.error == nil {
           guard let data = response.data else { return }
-          let json = JSON(data: data)
-          let id = json["_id"].stringValue
-          let imgName = json["avatarName"].stringValue
-          let imgColor = json["avatarColor"].stringValue
-          let email = json["email"].stringValue
-          let name = json["name"].stringValue
+          self.setUserInfo(data: data)
+          completion(true)
           
-          UserDataService.instance.setUserData(
-            id: id,
-            imgName: imgName,
-            imgColor: imgColor,
-            email: email,
-            name: name
-          )
-          
+        } else {
+          completion(false)
+          debugPrint(response.result.error as Any)
+        }
+    }
+  }
+  
+  func findUserByEmail (completion: @escaping CompletionHandeler) {
+    Alamofire.request(
+      "\(USER_BY_EMAIL_URL)\(userEmail)",
+      method: .get,
+      parameters: nil,
+      encoding: JSONEncoding.default,
+      headers: HEADER_WITH_TOKEN
+      ).responseJSON{ (response) in
+        if response.result.error == nil {
+          guard let data = response.data else { return }
+          self.setUserInfo(data: data)
           completion(true)
           
         } else {
@@ -162,5 +163,21 @@ class AuthService {
     }
   }
 
+  func setUserInfo (data: Data) {
+    let json = JSON(data: data)
+    let id = json["_id"].stringValue
+    let imgName = json["avatarName"].stringValue
+    let imgColor = json["avatarColor"].stringValue
+    let email = json["email"].stringValue
+    let name = json["name"].stringValue
+    
+    UserDataService.instance.setUserData(
+      id: id,
+      imgName: imgName,
+      imgColor: imgColor,
+      email: email,
+      name: name
+    )
+  }
   
 }
