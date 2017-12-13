@@ -14,6 +14,9 @@
 		042EA0E61FE101A5009B66A0 /* ImgPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0E51FE101A5009B66A0 /* ImgPickerVC.swift */; };
 		042EA0E81FE10748009B66A0 /* ImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0E71FE10748009B66A0 /* ImgCell.swift */; };
 		042EA0EA1FE1248A009B66A0 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0E91FE1248A009B66A0 /* CircleImage.swift */; };
+		042EA0EF1FE15B4D009B66A0 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0ED1FE15B4D009B66A0 /* ProfileVC.swift */; };
+		042EA0F01FE15B4D009B66A0 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042EA0EE1FE15B4D009B66A0 /* ProfileVC.xib */; };
+		042EA0F31FE1672D009B66A0 /* ModalRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0F21FE1672D009B66A0 /* ModalRadius.swift */; };
 		044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CB1FE042E100690401 /* AppDelegate.swift */; };
 		044EA5CE1FE042E100690401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CD1FE042E100690401 /* ViewController.swift */; };
 		044EA5D11FE042E100690401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044EA5CF1FE042E100690401 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 		042EA0E51FE101A5009B66A0 /* ImgPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgPickerVC.swift; sourceTree = "<group>"; };
 		042EA0E71FE10748009B66A0 /* ImgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgCell.swift; sourceTree = "<group>"; };
 		042EA0E91FE1248A009B66A0 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		042EA0ED1FE15B4D009B66A0 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		042EA0EE1FE15B4D009B66A0 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		042EA0F21FE1672D009B66A0 /* ModalRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalRadius.swift; sourceTree = "<group>"; };
 		044EA5C81FE042E100690401 /* cmdDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cmdDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044EA5CB1FE042E100690401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044EA5CD1FE042E100690401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +83,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		042EA0F11FE15B69009B66A0 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				042EA0EE1FE15B4D009B66A0 /* ProfileVC.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		044EA5BF1FE042E100690401 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +112,7 @@
 		044EA5CA1FE042E100690401 /* cmdDev */ = {
 			isa = PBXGroup;
 			children = (
+				042EA0F11FE15B69009B66A0 /* XIBs */,
 				042EA0DE1FE089D0009B66A0 /* Services */,
 				044EA5EC1FE050E900690401 /* Utilities */,
 				044EA5E71FE048B400690401 /* View */,
@@ -131,6 +146,7 @@
 				044EA5EA1FE04F3C00690401 /* LoginVC.swift */,
 				042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */,
 				042EA0E51FE101A5009B66A0 /* ImgPickerVC.swift */,
+				042EA0ED1FE15B4D009B66A0 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,6 +158,7 @@
 				042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */,
 				042EA0E71FE10748009B66A0 /* ImgCell.swift */,
 				042EA0E91FE1248A009B66A0 /* CircleImage.swift */,
+				042EA0F21FE1672D009B66A0 /* ModalRadius.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -234,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042EA0F01FE15B4D009B66A0 /* ProfileVC.xib in Resources */,
 				044EA5D61FE042E100690401 /* LaunchScreen.storyboard in Resources */,
 				044EA5D31FE042E100690401 /* Assets.xcassets in Resources */,
 				044EA5D11FE042E100690401 /* Main.storyboard in Resources */,
@@ -299,6 +317,8 @@
 				044EA5E61FE0451C00690401 /* navVC.swift in Sources */,
 				042EA0E61FE101A5009B66A0 /* ImgPickerVC.swift in Sources */,
 				044EA5EB1FE04F3C00690401 /* LoginVC.swift in Sources */,
+				042EA0EF1FE15B4D009B66A0 /* ProfileVC.swift in Sources */,
+				042EA0F31FE1672D009B66A0 /* ModalRadius.swift in Sources */,
 				044EA5E91FE048DB00690401 /* GradientView.swift in Sources */,
 				042EA0E81FE10748009B66A0 /* ImgCell.swift in Sources */,
 				044EA5E41FE0450400690401 /* mainVC.swift in Sources */,

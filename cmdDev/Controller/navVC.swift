@@ -33,7 +33,14 @@ class navVC: UIViewController {
   }
 
   @IBAction func btnLoginClick(_ sender: Any) {
-    performSegue(withIdentifier: ToLogin, sender: nil)
+    if AuthService.instance.isLogggedIn {
+      let profile = ProfileVC()
+      profile.modalPresentationStyle = .custom
+      present(profile, animated: true, completion: nil)
+    } else {
+      performSegue(withIdentifier: ToLogin, sender: nil)
+    }
+
   }
   
   
