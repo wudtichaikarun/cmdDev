@@ -172,6 +172,7 @@
                     </view>
                     <connections>
                         <outlet property="btnLogin" destination="bVa-ei-KG7" id="Vxg-1R-S17"/>
+                        <outlet property="userImage" destination="SbU-Cx-MRI" id="Ykd-Xm-OGi"/>
                         <segue destination="av8-x3-IUJ" kind="show" identifier="toLogin" id="bQt-Em-fKW"/>
                     </connections>
                 </viewController>

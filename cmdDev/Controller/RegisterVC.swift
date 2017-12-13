@@ -60,7 +60,7 @@ class RegisterVC: UIViewController {
     let b = CGFloat(arc4random_uniform(255)) / 255
     
     bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
-    
+    imgColor = "[\(r), \(g), \(b), 1]"
     UIView.animate(withDuration: 0.2) {
       self.profileImg.backgroundColor = self.bgColor
     }
