@@ -27,6 +27,9 @@ let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
+// notification
+let NOTIF_USER_DATA_CHANGE = Notification.Name("notifUserDataChange")
+
 // http header
 let HTTP_HEADER = [
   "Content-Type": "application/json; charset=utf-8"

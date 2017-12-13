@@ -43,6 +43,7 @@ class AuthService {
     }
   }
   
+  // register
   func register (email: String, password: String, completion: @escaping CompletionHandeler) {
     let lowerCaseEmail = email.lowercased()
     
@@ -68,6 +69,7 @@ class AuthService {
     
   }
   
+  // login
   func login (email: String, password: String, completion: @escaping CompletionHandeler) {
     let lowerCaseEmail = email.lowercased()
     
@@ -111,6 +113,7 @@ class AuthService {
     
   }
 
+  // create user profile
   func createUser(name: String, email: String, imgName: String, imgColor: String, completion: @escaping CompletionHandeler) {
     let lowerCaseEmail = email.lowercased()
     
