@@ -17,6 +17,10 @@ class RegisterVC: UIViewController {
   
   @IBOutlet weak var profileImg: UIImageView!
   
+  // variable
+  var imgName = "profileDefault"
+  var imgColor = "[0.5, 0.5, 0.5, 1]"
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -29,6 +33,7 @@ class RegisterVC: UIViewController {
   }
   
   @IBAction func btnRegisterClick(_ sender: Any) {
+     guard let name = userNameText.text, userNameText.text != "" else { return }
     guard let email = emailText.text, emailText.text != "" else { return }
     guard let password = passwordText.text, passwordText.text != "" else { return }
     
@@ -43,8 +48,20 @@ class RegisterVC: UIViewController {
         
         AuthService.instance.login(email: email, password: password, completion: { (success) in
           if success {
-            print("logged in success", AuthService.instance.authToken)
+            //print("logged in success", AuthService.instance.authToken)
+            AuthService.instance.createUser(
+              name: name,
+              email: email,
+              imgName: self.imgName,
+              imgColor: self.imgColor,
+              completion: { (success) in
+                if success {
+                  print(UserDataService.instance.name,UserDataService.instance.imgName)
+                  self.performSegue(withIdentifier: Unwind, sender: nil)
+                }
+            })
           }
+          
         })
       }
     }

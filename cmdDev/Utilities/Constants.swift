@@ -14,6 +14,7 @@ typealias CompletionHandeler = (_ Success: Bool) -> ()
 let BASE_URL = "https://cmddev.herokuapp.com/v1/"
 let REGISTER_URL = "\(BASE_URL)account/register"
 let LOGIN_URL = "\(BASE_URL)account/login"
+let USER_ADD_URL = "\(BASE_URL)user/add"
 
 // segues
 let ToLogin = "toLogin"

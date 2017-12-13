@@ -10,6 +10,7 @@
 		042EA0DD1FE059D3009B66A0 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */; };
 		042EA0E01FE089F7009B66A0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0DF1FE089F7009B66A0 /* AuthService.swift */; };
 		042EA0E21FE0948A009B66A0 /* ButtonRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */; };
+		042EA0E41FE0EE22009B66A0 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0E31FE0EE22009B66A0 /* UserDataService.swift */; };
 		044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CB1FE042E100690401 /* AppDelegate.swift */; };
 		044EA5CE1FE042E100690401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CD1FE042E100690401 /* ViewController.swift */; };
 		044EA5D11FE042E100690401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044EA5CF1FE042E100690401 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		042EA0DF1FE089F7009B66A0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRadius.swift; sourceTree = "<group>"; };
+		042EA0E31FE0EE22009B66A0 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		044EA5C81FE042E100690401 /* cmdDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cmdDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044EA5CB1FE042E100690401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044EA5CD1FE042E100690401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				042EA0DF1FE089F7009B66A0 /* AuthService.swift */,
+				042EA0E31FE0EE22009B66A0 /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				044EA5E91FE048DB00690401 /* GradientView.swift in Sources */,
 				044EA5E41FE0450400690401 /* mainVC.swift in Sources */,
 				042EA0E21FE0948A009B66A0 /* ButtonRadius.swift in Sources */,
+				042EA0E41FE0EE22009B66A0 /* UserDataService.swift in Sources */,
 				044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */,
 				042EA0DD1FE059D3009B66A0 /* RegisterVC.swift in Sources */,
 				042EA0E01FE089F7009B66A0 /* AuthService.swift in Sources */,
