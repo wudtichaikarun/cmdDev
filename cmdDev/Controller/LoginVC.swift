@@ -17,6 +17,13 @@ class LoginVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     spinner.isHidden = true
+    let tap = UITapGestureRecognizer(target: self, action: #selector(LoginVC.handleTap))
+    view.addGestureRecognizer(tap)
+  }
+
+  // close keyboard
+  @objc func handleTap() {
+    view.endEditing(true)
   }
 
   @IBAction func btnClose(_ sender: Any) {

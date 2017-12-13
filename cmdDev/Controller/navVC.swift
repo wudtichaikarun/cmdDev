@@ -20,16 +20,12 @@ class navVC: UIViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(navVC.userDataChange(_:)), name: NOTIF_USER_DATA_CHANGE, object: nil)
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    setUpUserInfo()
+  }
+  
   @objc func userDataChange(_ notif: Notification) {
-    if AuthService.instance.isLogggedIn {
-      btnLogin.setTitle(UserDataService.instance.name, for: .normal)
-      userImage.image = UIImage(named: UserDataService.instance.imgName)
-      userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.imgColor)
-    } else {
-      btnLogin.setTitle("Login", for: .normal)
-      userImage.image = UIImage(named: "menuProfileIcon")
-      userImage.backgroundColor = UIColor.clear
-    }
+    setUpUserInfo()
   }
 
   @IBAction func btnLoginClick(_ sender: Any) {
@@ -41,6 +37,18 @@ class navVC: UIViewController {
       performSegue(withIdentifier: ToLogin, sender: nil)
     }
 
+  }
+  
+  func setUpUserInfo() {
+    if AuthService.instance.isLogggedIn {
+      btnLogin.setTitle(UserDataService.instance.name, for: .normal)
+      userImage.image = UIImage(named: UserDataService.instance.imgName)
+      userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.imgColor)
+    } else {
+      btnLogin.setTitle("Login", for: .normal)
+      userImage.image = UIImage(named: "menuProfileIcon")
+      userImage.backgroundColor = UIColor.clear
+    }
   }
   
   
