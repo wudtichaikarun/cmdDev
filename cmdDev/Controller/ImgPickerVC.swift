@@ -11,8 +11,12 @@ import UIKit
 class ImgPickerVC: UIViewController, UICollectionViewDelegate,
  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
+  // outlets
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var segmentControl: UISegmentedControl!
+  
+  // variables
+  var imageType = imgType.dark
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,6 +26,7 @@ class ImgPickerVC: UIViewController, UICollectionViewDelegate,
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imgCell", for: indexPath) as? ImgCell {
+      cell.configCell(index: indexPath.item, type: imageType )
       return cell
     }
     return ImgCell()

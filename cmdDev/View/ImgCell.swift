@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum imgType {
+  case dark
+  case light
+}
+
 class ImgCell: UICollectionViewCell {
   
   @IBOutlet weak var imageFromView: UIImageView!
@@ -16,6 +21,16 @@ class ImgCell: UICollectionViewCell {
     super.awakeFromNib()
     setUpView()
     
+  }
+  
+  func configCell (index: Int, type: imgType) {
+    if type == imgType.dark {
+      imageFromView.image = UIImage(named: "dark\(index)")
+      self.layer.backgroundColor = UIColor.lightGray.cgColor
+    } else {
+      imageFromView.image = UIImage(named: "light\(index)")
+      self.layer.backgroundColor = UIColor.gray.cgColor
+    }
   }
   
   func setUpView () {
