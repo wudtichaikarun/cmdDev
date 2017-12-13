@@ -28,6 +28,10 @@ class mainVC: UIViewController {
       })
     }
     
+    DataService.instance.findAllCategory { (success) in
+
+    }
+    
   }
   
 }

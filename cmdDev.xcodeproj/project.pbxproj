@@ -17,6 +17,8 @@
 		042EA0EF1FE15B4D009B66A0 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0ED1FE15B4D009B66A0 /* ProfileVC.swift */; };
 		042EA0F01FE15B4D009B66A0 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042EA0EE1FE15B4D009B66A0 /* ProfileVC.xib */; };
 		042EA0F31FE1672D009B66A0 /* ModalRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0F21FE1672D009B66A0 /* ModalRadius.swift */; };
+		044795AA1FE1A49000EC1588 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044795A91FE1A49000EC1588 /* DataService.swift */; };
+		044795AD1FE1A4FB00EC1588 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044795AC1FE1A4FB00EC1588 /* Category.swift */; };
 		044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CB1FE042E100690401 /* AppDelegate.swift */; };
 		044EA5CE1FE042E100690401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CD1FE042E100690401 /* ViewController.swift */; };
 		044EA5D11FE042E100690401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044EA5CF1FE042E100690401 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		042EA0ED1FE15B4D009B66A0 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		042EA0EE1FE15B4D009B66A0 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		042EA0F21FE1672D009B66A0 /* ModalRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalRadius.swift; sourceTree = "<group>"; };
+		044795A91FE1A49000EC1588 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		044795AC1FE1A4FB00EC1588 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		044EA5C81FE042E100690401 /* cmdDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cmdDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044EA5CB1FE042E100690401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044EA5CD1FE042E100690401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			children = (
 				042EA0DF1FE089F7009B66A0 /* AuthService.swift */,
 				042EA0E31FE0EE22009B66A0 /* UserDataService.swift */,
+				044795A91FE1A49000EC1588 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -89,6 +94,14 @@
 				042EA0EE1FE15B4D009B66A0 /* ProfileVC.xib */,
 			);
 			path = XIBs;
+			sourceTree = "<group>";
+		};
+		044795AB1FE1A4DF00EC1588 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				044795AC1FE1A4FB00EC1588 /* Category.swift */,
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 		044EA5BF1FE042E100690401 = {
@@ -112,6 +125,7 @@
 		044EA5CA1FE042E100690401 /* cmdDev */ = {
 			isa = PBXGroup;
 			children = (
+				044795AB1FE1A4DF00EC1588 /* Modal */,
 				042EA0F11FE15B69009B66A0 /* XIBs */,
 				042EA0DE1FE089D0009B66A0 /* Services */,
 				044EA5EC1FE050E900690401 /* Utilities */,
@@ -315,6 +329,7 @@
 			files = (
 				044EA5CE1FE042E100690401 /* ViewController.swift in Sources */,
 				044EA5E61FE0451C00690401 /* navVC.swift in Sources */,
+				044795AD1FE1A4FB00EC1588 /* Category.swift in Sources */,
 				042EA0E61FE101A5009B66A0 /* ImgPickerVC.swift in Sources */,
 				044EA5EB1FE04F3C00690401 /* LoginVC.swift in Sources */,
 				042EA0EF1FE15B4D009B66A0 /* ProfileVC.swift in Sources */,
@@ -322,6 +337,7 @@
 				044EA5E91FE048DB00690401 /* GradientView.swift in Sources */,
 				042EA0E81FE10748009B66A0 /* ImgCell.swift in Sources */,
 				044EA5E41FE0450400690401 /* mainVC.swift in Sources */,
+				044795AA1FE1A49000EC1588 /* DataService.swift in Sources */,
 				042EA0E21FE0948A009B66A0 /* ButtonRadius.swift in Sources */,
 				042EA0E41FE0EE22009B66A0 /* UserDataService.swift in Sources */,
 				044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */,
