@@ -40,11 +40,43 @@ class ImgPickerVC: UIViewController, UICollectionViewDelegate,
     return 28
   }
   
+  // back to register vc
   @IBAction func btnBackClick(_ sender: Any) {
     dismiss(animated: true, completion: nil)
   }
   
+  // segment selected dark | light
   @IBAction func segmentControlChange(_ sender: Any) {
+    if segmentControl.selectedSegmentIndex == 0 {
+      imageType = .dark
+    } else {
+      imageType = .light
+    }
+    collectionView.reloadData()
+  }
+  
+  // responsive design
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    // for iphoneSE
+    var numberOfColumns : CGFloat = 3
+    // for iphone6 -> iphoneXI
+    if UIScreen.main.bounds.width > 320 {
+      numberOfColumns = 4
+    }
+    let speceBetweenCell : CGFloat = 10
+    let padding :CGFloat = 40
+    let cellDimension = ((collectionView.bounds.width - padding) - (numberOfColumns - 1 ) * speceBetweenCell) / numberOfColumns
+    return CGSize(width: cellDimension, height: cellDimension)
+  }
+  
+  // set image
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    if imageType == .dark {
+      UserDataService.instance.setProfileImg(imgName: "dark\(indexPath.item)")
+    } else {
+       UserDataService.instance.setProfileImg(imgName: "light\(indexPath.item)")
+    }
+    self.dismiss(animated: true, completion: nil)
   }
   
 }

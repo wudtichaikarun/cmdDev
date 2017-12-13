@@ -25,6 +25,13 @@ class RegisterVC: UIViewController {
     super.viewDidLoad()
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    if UserDataService.instance.imgName != "" {
+      self.profileImg.image = UIImage(named: UserDataService.instance.imgName)
+      self.imgName = UserDataService.instance.imgName
+    }
+  }
+  
   @IBAction func btnClose(_ sender: Any) {
     performSegue(withIdentifier: Unwind, sender: nil)
   }
