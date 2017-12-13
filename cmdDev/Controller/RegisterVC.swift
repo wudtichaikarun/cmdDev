@@ -34,7 +34,18 @@ class RegisterVC: UIViewController {
     
     AuthService.instance.register(email: email, password: password) { (success) in
       if success {
-        print("register success")
+        // alert
+        /*
+        let alert = UIAlertController(title: "Alert", message: "register success", preferredStyle:UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        */
+        
+        AuthService.instance.login(email: email, password: password, completion: { (success) in
+          if success {
+            print("logged in success", AuthService.instance.authToken)
+          }
+        })
       }
     }
     
