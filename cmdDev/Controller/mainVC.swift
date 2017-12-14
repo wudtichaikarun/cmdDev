@@ -35,6 +35,16 @@ class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     NotificationCenter.default.addObserver(self, selector: #selector(mainVC.categorySelected(_:)), name: NOTIF_CATEGORY_SELECTED, object: nil)
     
+    SocketService.instance.getCommandMassage { (success) in
+      if success {
+        self.tableView.reloadData()
+        if DataService.instance.categorys.count > 0 {
+          let endIndex = IndexPath(row: DataService.instance.commands.count - 1, section: 0)
+          self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+        }
+      }
+    }
+    
     if AuthService.instance.isLogggedIn {
       AuthService.instance.findUserByEmail(completion: { (success) in
         NotificationCenter.default.post(name: NOTIF_USER_DATA_CHANGE, object: nil)

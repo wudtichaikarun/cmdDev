@@ -50,4 +50,24 @@ class SocketService: NSObject {
     completion(true)
   }
   
+  func getCommandMassage(completion : @escaping CompletionHandeler) {
+    socket.on("commandCreate") { (dataArray, ack) in
+      guard let cmdKey = dataArray[0] as? String else { return }
+      guard let cmdDescription = dataArray[1] as? String else { return }
+      guard let categoryId = dataArray[2] as? String else { return }
+      guard let userCreateId = dataArray[3] as? String else { return }
+      guard let _id = dataArray[4] as? String else { return }
+      
+      if categoryId == DataService.instance.selectedCategory?.categoryId && AuthService.instance.isLogggedIn {
+        let newMassage = Command(cmdId: _id, cmdKey: cmdKey, cmdDescription: cmdDescription, categoryId: categoryId, userCreateId: userCreateId)
+        
+        DataService.instance.commands.append(newMassage)
+        completion(true)
+        
+      } else {
+        completion(false)
+      }
+    }
+  }
+  
 }
