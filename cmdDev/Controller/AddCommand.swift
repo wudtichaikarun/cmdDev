@@ -22,6 +22,7 @@ class AddCommand: UIViewController {
     let closeTouch = UITapGestureRecognizer(target: self, action: #selector(AddCommand.closeTap(_:)))
     bgView.addGestureRecognizer(closeTouch)
     
+    cmdDescriptionText.placeholder = "Description"
   }
   
   @objc func closeTap (_ recognizer: UITapGestureRecognizer) {
