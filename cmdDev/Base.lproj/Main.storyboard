@@ -16,6 +16,9 @@
             <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
         </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Reveal View Controller-->
@@ -84,18 +87,66 @@
                                     <constraint firstAttribute="trailing" secondItem="9aL-du-eCU" secondAttribute="trailing" constant="12" id="qBM-mr-z23"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kg1-EM-KtU">
+                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commandCell" rowHeight="57" id="Ult-27-k1T" customClass="CommandCell" customModule="cmdDev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ult-27-k1T" id="Jpe-BD-TMl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecP-af-26X">
+                                                    <rect key="frame" x="30" y="19" width="95" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="95" id="nfy-hR-gPd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJK-Ck-Ryv">
+                                                    <rect key="frame" x="137" y="19" width="223" height="27"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eJK-Ck-Ryv" secondAttribute="bottom" id="1QE-sl-wuU"/>
+                                                <constraint firstItem="eJK-Ck-Ryv" firstAttribute="top" secondItem="Jpe-BD-TMl" secondAttribute="topMargin" constant="8" id="Rf4-Jd-4mw"/>
+                                                <constraint firstItem="ecP-af-26X" firstAttribute="leading" secondItem="Jpe-BD-TMl" secondAttribute="leadingMargin" constant="15" id="sJS-zo-6dU"/>
+                                                <constraint firstItem="ecP-af-26X" firstAttribute="top" secondItem="Jpe-BD-TMl" secondAttribute="topMargin" constant="8" id="seq-Hd-gYr"/>
+                                                <constraint firstItem="eJK-Ck-Ryv" firstAttribute="leading" secondItem="Jpe-BD-TMl" secondAttribute="leading" constant="137" id="ygv-pa-62T"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eJK-Ck-Ryv" secondAttribute="trailing" id="zN4-tp-cne"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cmdDescriptionLbl" destination="eJK-Ck-Ryv" id="sTq-9c-Hf6"/>
+                                            <outlet property="cmdKeyLbl" destination="ecP-af-26X" id="Bfa-CO-lZw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="O7l-Ux-kHk" firstAttribute="trailing" secondItem="Zyg-IY-LEn" secondAttribute="trailing" id="0AU-r8-G9t"/>
                             <constraint firstItem="O7l-Ux-kHk" firstAttribute="top" secondItem="dZh-fy-IAe" secondAttribute="top" id="1Pw-9u-hZK"/>
+                            <constraint firstItem="kg1-EM-KtU" firstAttribute="leading" secondItem="Zyg-IY-LEn" secondAttribute="leading" id="Ssq-Lx-hkm"/>
+                            <constraint firstItem="kg1-EM-KtU" firstAttribute="trailing" secondItem="Zyg-IY-LEn" secondAttribute="trailing" id="VWB-on-7Pk"/>
                             <constraint firstItem="O7l-Ux-kHk" firstAttribute="leading" secondItem="Zyg-IY-LEn" secondAttribute="leading" id="asM-IU-qLA"/>
+                            <constraint firstItem="kg1-EM-KtU" firstAttribute="top" secondItem="Zyg-IY-LEn" secondAttribute="top" constant="55" id="d4i-KJ-DeA"/>
+                            <constraint firstItem="kg1-EM-KtU" firstAttribute="bottom" secondItem="Zyg-IY-LEn" secondAttribute="bottom" id="oPH-UI-HLk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zyg-IY-LEn"/>
                     </view>
                     <connections>
                         <outlet property="btnMenu" destination="FPi-mQ-zhX" id="8lR-7f-Xaj"/>
                         <outlet property="categoryNameLbl" destination="Hj0-fv-fc9" id="PkK-3J-hiR"/>
+                        <outlet property="tableView" destination="kg1-EM-KtU" id="6f7-o1-0wJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfj-SB-ic8" userLabel="First Responder" sceneMemberID="firstResponder"/>

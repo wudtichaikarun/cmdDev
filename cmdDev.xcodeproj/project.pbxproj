@@ -11,6 +11,7 @@
 		042E08061FE2C3E800BEE1BD /* AddCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E08041FE2C3E800BEE1BD /* AddCommand.swift */; };
 		042E08071FE2C3E800BEE1BD /* AddCommand.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042E08051FE2C3E800BEE1BD /* AddCommand.xib */; };
 		042E08091FE2D59300BEE1BD /* TextFildCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E08081FE2D59300BEE1BD /* TextFildCustom.swift */; };
+		042E080B1FE2E72600BEE1BD /* CommandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E080A1FE2E72600BEE1BD /* CommandCell.swift */; };
 		042EA0DD1FE059D3009B66A0 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */; };
 		042EA0E01FE089F7009B66A0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0DF1FE089F7009B66A0 /* AuthService.swift */; };
 		042EA0E21FE0948A009B66A0 /* ButtonRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */; };
@@ -46,6 +47,7 @@
 		042E08041FE2C3E800BEE1BD /* AddCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommand.swift; sourceTree = "<group>"; };
 		042E08051FE2C3E800BEE1BD /* AddCommand.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCommand.xib; sourceTree = "<group>"; };
 		042E08081FE2D59300BEE1BD /* TextFildCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFildCustom.swift; sourceTree = "<group>"; };
+		042E080A1FE2E72600BEE1BD /* CommandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCell.swift; sourceTree = "<group>"; };
 		042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		042EA0DF1FE089F7009B66A0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRadius.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				042EA0F21FE1672D009B66A0 /* ModalRadius.swift */,
 				044795AE1FE1D85600EC1588 /* CategoryCell.swift */,
 				042E08081FE2D59300BEE1BD /* TextFildCustom.swift */,
+				042E080A1FE2E72600BEE1BD /* CommandCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				042EA0DD1FE059D3009B66A0 /* RegisterVC.swift in Sources */,
 				044795B91FE2682500EC1588 /* SocketService.swift in Sources */,
 				042EA0E01FE089F7009B66A0 /* AuthService.swift in Sources */,
+				042E080B1FE2E72600BEE1BD /* CommandCell.swift in Sources */,
 				044EA5E11FE0445F00690401 /* SWRevealViewController.m in Sources */,
 				042E08091FE2D59300BEE1BD /* TextFildCustom.swift in Sources */,
 				042E08031FE2ADE400BEE1BD /* Command.swift in Sources */,

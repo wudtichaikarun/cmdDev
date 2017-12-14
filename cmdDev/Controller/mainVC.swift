@@ -8,18 +8,26 @@
 
 import UIKit
 
-class mainVC: UIViewController {
+class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var btnMenu: UIButton!
   @IBOutlet weak var categoryNameLbl: UILabel!
+  @IBOutlet weak var tableView: UITableView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.delegate = self
+    tableView.dataSource = self
+    
+    tableView.estimatedRowHeight = 80
+    tableView.rowHeight = UITableViewAutomaticDimension
+    
     btnMenu.addTarget(
       self.revealViewController(),
       action: #selector(SWRevealViewController.revealToggle(_:)),
       for: .touchUpInside
     )
+    
     self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
     
@@ -60,7 +68,7 @@ class mainVC: UIViewController {
   
   func updateWithCategory () {
     let categoryName = DataService.instance.selectedCategory?.categoryName ?? ""
-    categoryNameLbl.text = "CmdDev #\(categoryName)"
+    categoryNameLbl.text = "#\(categoryName)"
     getCommands()
   }
   
@@ -80,8 +88,24 @@ class mainVC: UIViewController {
   func getCommands () {
     guard let catId = DataService.instance.selectedCategory?.categoryId else { return }
     DataService.instance.findAllCommandForMain(categoryId: catId) { (success) in
-      // dosomething
+      if success {
+        self.tableView.reloadData()
+      }
     }
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "commandCell", for: indexPath) as? CommandCell {
+      let command = DataService.instance.commands[indexPath.row]
+      cell.configureCell(command: command)
+      return cell
+    } else {
+      return UITableViewCell()
+    }
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return DataService.instance.commands.count
   }
   
 }
