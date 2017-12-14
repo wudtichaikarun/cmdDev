@@ -31,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyR-mQ-XvE" userLabel="bgView">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgm-ED-wp5" customClass="ModalRadius" customModule="cmdDev" customModuleProvider="target">
@@ -103,10 +103,10 @@
                 <constraint firstItem="hgm-ED-wp5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Js9-hN-Ng7"/>
                 <constraint firstItem="hgm-ED-wp5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QbZ-FU-MgJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hgm-ED-wp5" secondAttribute="trailing" constant="20" id="RUs-FO-nEe"/>
-                <constraint firstItem="jyR-mQ-XvE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aXx-gd-fqs"/>
                 <constraint firstItem="jyR-mQ-XvE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b5y-ub-b4m"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jyR-mQ-XvE" secondAttribute="trailing" id="cq4-BZ-fIA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jyR-mQ-XvE" secondAttribute="bottom" id="kY9-Pt-uHe"/>
+                <constraint firstItem="jyR-mQ-XvE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sL9-PK-elU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="136.5"/>

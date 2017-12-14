@@ -120,58 +120,73 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-De-ZzQ">
-                                <rect key="frame" x="0.0" y="86" width="375" height="250"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CM4-De-ZzQ" secondAttribute="height" multiplier="3:2" id="LoR-Jl-YKI"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="te7-Mp-XpX">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="60" id="te7-Mp-XpX" customClass="CategoryCell" customModule="cmdDev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="te7-Mp-XpX" id="Nvc-rS-t8R">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyn-Ob-5fb">
-                                                    <rect key="frame" x="35" y="14.5" width="38.5" height="14.5"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                                    <rect key="frame" x="40" y="19" width="55" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWK-N0-rnz">
-                                                    <rect key="frame" x="278" y="10" width="22" height="22"/>
-                                                    <state key="normal" image="addButton"/>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="dWK-N0-rnz" secondAttribute="trailing" constant="75" id="OoG-Hj-V8B"/>
-                                                <constraint firstItem="Oyn-Ob-5fb" firstAttribute="leading" secondItem="Nvc-rS-t8R" secondAttribute="leadingMargin" constant="20" id="kQH-Dp-TkM"/>
-                                                <constraint firstItem="dWK-N0-rnz" firstAttribute="centerY" secondItem="Oyn-Ob-5fb" secondAttribute="centerY" id="o1U-Dj-AKa"/>
-                                                <constraint firstItem="Oyn-Ob-5fb" firstAttribute="centerY" secondItem="Nvc-rS-t8R" secondAttribute="centerY" id="z47-K9-KLL"/>
+                                                <constraint firstItem="Oyn-Ob-5fb" firstAttribute="leading" secondItem="Nvc-rS-t8R" secondAttribute="leadingMargin" constant="25" id="IQ0-3n-aH8"/>
+                                                <constraint firstItem="Oyn-Ob-5fb" firstAttribute="centerY" secondItem="Nvc-rS-t8R" secondAttribute="centerY" id="UHx-c9-Pvo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="categoryName" destination="Oyn-Ob-5fb" id="z0H-ny-Aay"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y91-KI-J6x">
+                                <rect key="frame" x="25" y="91" width="72" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVX-0Z-1qk">
+                                <rect key="frame" x="278" y="91" width="22" height="22"/>
+                                <state key="normal" image="addButton"/>
+                                <connections>
+                                    <action selector="btnAddCategoryClick:" destination="bth-W7-Bu6" eventType="touchUpInside" id="Yan-K2-Mk1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CM4-De-ZzQ" firstAttribute="leading" secondItem="Jat-qk-MfB" secondAttribute="leading" id="4di-OG-GHA"/>
+                            <constraint firstItem="Y91-KI-J6x" firstAttribute="leading" secondItem="Jat-qk-MfB" secondAttribute="leading" constant="25" id="5Gc-ta-gED"/>
                             <constraint firstItem="bVa-ei-KG7" firstAttribute="leading" secondItem="SbU-Cx-MRI" secondAttribute="trailing" constant="20" id="8MB-y1-FYT"/>
                             <constraint firstItem="d8q-k2-kVg" firstAttribute="top" secondItem="Jat-qk-MfB" secondAttribute="top" constant="25" id="CKL-sE-sqh"/>
                             <constraint firstItem="CM4-De-ZzQ" firstAttribute="trailing" secondItem="Jat-qk-MfB" secondAttribute="trailing" id="CQe-BS-bpH"/>
                             <constraint firstItem="d8q-k2-kVg" firstAttribute="leading" secondItem="Jat-qk-MfB" secondAttribute="leading" constant="25" id="DQd-yR-LvC"/>
                             <constraint firstItem="SbU-Cx-MRI" firstAttribute="leading" secondItem="Jat-qk-MfB" secondAttribute="leading" constant="25" id="L3K-SF-VHF"/>
+                            <constraint firstItem="Jat-qk-MfB" firstAttribute="trailing" secondItem="jVX-0Z-1qk" secondAttribute="trailing" constant="75" id="NTN-1l-QlN"/>
+                            <constraint firstItem="jVX-0Z-1qk" firstAttribute="centerY" secondItem="Y91-KI-J6x" secondAttribute="centerY" id="UJ2-W8-4Nd"/>
                             <constraint firstItem="Jat-qk-MfB" firstAttribute="bottom" secondItem="SbU-Cx-MRI" secondAttribute="bottom" constant="25" id="heN-ZS-Ypc"/>
                             <constraint firstItem="bVa-ei-KG7" firstAttribute="centerY" secondItem="SbU-Cx-MRI" secondAttribute="centerY" id="l9J-KC-6dF"/>
-                            <constraint firstItem="CM4-De-ZzQ" firstAttribute="top" secondItem="d8q-k2-kVg" secondAttribute="bottom" constant="20" id="wPX-2W-sXd"/>
+                            <constraint firstItem="CM4-De-ZzQ" firstAttribute="top" secondItem="jVX-0Z-1qk" secondAttribute="bottom" constant="17" id="n2W-hG-ft1"/>
+                            <constraint firstItem="Y91-KI-J6x" firstAttribute="top" secondItem="d8q-k2-kVg" secondAttribute="bottom" constant="25" id="pQw-jX-SOy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jat-qk-MfB"/>
                     </view>
                     <connections>
                         <outlet property="btnLogin" destination="bVa-ei-KG7" id="Vxg-1R-S17"/>
+                        <outlet property="tableView" destination="CM4-De-ZzQ" id="rbo-4K-quN"/>
                         <outlet property="userImage" destination="SbU-Cx-MRI" id="Ykd-Xm-OGi"/>
                         <segue destination="av8-x3-IUJ" kind="show" identifier="toLogin" id="bQt-Em-fKW"/>
                     </connections>

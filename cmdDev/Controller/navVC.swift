@@ -8,14 +8,18 @@
 
 import UIKit
 
-class navVC: UIViewController {
+class navVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var btnLogin: UIButton!
+  @IBOutlet weak var tableView: UITableView!
   @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
   @IBOutlet weak var userImage: CircleImage!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.delegate = self
+    tableView.dataSource = self
+    
     self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
     NotificationCenter.default.addObserver(self, selector: #selector(navVC.userDataChange(_:)), name: NOTIF_USER_DATA_CHANGE, object: nil)
   }
@@ -28,6 +32,12 @@ class navVC: UIViewController {
     setUpUserInfo()
   }
 
+  @IBAction func btnAddCategoryClick(_ sender: Any) {
+    let addCategory = AddCategoryVC()
+    addCategory.modalPresentationStyle = .custom
+    present(addCategory, animated: true, completion: nil)
+  }
+  
   @IBAction func btnLoginClick(_ sender: Any) {
     if AuthService.instance.isLogggedIn {
       let profile = ProfileVC()
@@ -49,6 +59,24 @@ class navVC: UIViewController {
       userImage.image = UIImage(named: "menuProfileIcon")
       userImage.backgroundColor = UIColor.clear
     }
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as? CategoryCell{
+      let category = DataService.instance.categorys[indexPath.row]
+      cell.configCell(category: category)
+      return cell
+    } else {
+      return UITableViewCell()
+    }
+  }
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return DataService.instance.categorys.count
   }
   
   

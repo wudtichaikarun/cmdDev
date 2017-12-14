@@ -19,6 +19,9 @@
 		042EA0F31FE1672D009B66A0 /* ModalRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0F21FE1672D009B66A0 /* ModalRadius.swift */; };
 		044795AA1FE1A49000EC1588 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044795A91FE1A49000EC1588 /* DataService.swift */; };
 		044795AD1FE1A4FB00EC1588 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044795AC1FE1A4FB00EC1588 /* Category.swift */; };
+		044795AF1FE1D85600EC1588 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044795AE1FE1D85600EC1588 /* CategoryCell.swift */; };
+		044795B61FE242F900EC1588 /* AddCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044795B41FE242F900EC1588 /* AddCategoryVC.swift */; };
+		044795B71FE242F900EC1588 /* AddCategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044795B51FE242F900EC1588 /* AddCategoryVC.xib */; };
 		044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CB1FE042E100690401 /* AppDelegate.swift */; };
 		044EA5CE1FE042E100690401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CD1FE042E100690401 /* ViewController.swift */; };
 		044EA5D11FE042E100690401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044EA5CF1FE042E100690401 /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 		042EA0F21FE1672D009B66A0 /* ModalRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalRadius.swift; sourceTree = "<group>"; };
 		044795A91FE1A49000EC1588 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		044795AC1FE1A4FB00EC1588 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		044795AE1FE1D85600EC1588 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		044795B41FE242F900EC1588 /* AddCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryVC.swift; sourceTree = "<group>"; };
+		044795B51FE242F900EC1588 /* AddCategoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddCategoryVC.xib; path = ../Controller/AddCategoryVC.xib; sourceTree = "<group>"; };
 		044EA5C81FE042E100690401 /* cmdDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cmdDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044EA5CB1FE042E100690401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044EA5CD1FE042E100690401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 		042EA0F11FE15B69009B66A0 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				044795B51FE242F900EC1588 /* AddCategoryVC.xib */,
 				042EA0EE1FE15B4D009B66A0 /* ProfileVC.xib */,
 			);
 			path = XIBs;
@@ -126,11 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				044795AB1FE1A4DF00EC1588 /* Modal */,
-				042EA0F11FE15B69009B66A0 /* XIBs */,
-				042EA0DE1FE089D0009B66A0 /* Services */,
-				044EA5EC1FE050E900690401 /* Utilities */,
 				044EA5E71FE048B400690401 /* View */,
 				044EA5E21FE044ED00690401 /* Controller */,
+				042EA0DE1FE089D0009B66A0 /* Services */,
+				042EA0F11FE15B69009B66A0 /* XIBs */,
+				044EA5EC1FE050E900690401 /* Utilities */,
 				044EA5DD1FE0444100690401 /* SupportingFile */,
 				044EA5CB1FE042E100690401 /* AppDelegate.swift */,
 				044EA5CD1FE042E100690401 /* ViewController.swift */,
@@ -161,6 +168,7 @@
 				042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */,
 				042EA0E51FE101A5009B66A0 /* ImgPickerVC.swift */,
 				042EA0ED1FE15B4D009B66A0 /* ProfileVC.swift */,
+				044795B41FE242F900EC1588 /* AddCategoryVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 				042EA0E71FE10748009B66A0 /* ImgCell.swift */,
 				042EA0E91FE1248A009B66A0 /* CircleImage.swift */,
 				042EA0F21FE1672D009B66A0 /* ModalRadius.swift */,
+				044795AE1FE1D85600EC1588 /* CategoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +276,7 @@
 			files = (
 				042EA0F01FE15B4D009B66A0 /* ProfileVC.xib in Resources */,
 				044EA5D61FE042E100690401 /* LaunchScreen.storyboard in Resources */,
+				044795B71FE242F900EC1588 /* AddCategoryVC.xib in Resources */,
 				044EA5D31FE042E100690401 /* Assets.xcassets in Resources */,
 				044EA5D11FE042E100690401 /* Main.storyboard in Resources */,
 			);
@@ -336,6 +346,7 @@
 				042EA0F31FE1672D009B66A0 /* ModalRadius.swift in Sources */,
 				044EA5E91FE048DB00690401 /* GradientView.swift in Sources */,
 				042EA0E81FE10748009B66A0 /* ImgCell.swift in Sources */,
+				044795B61FE242F900EC1588 /* AddCategoryVC.swift in Sources */,
 				044EA5E41FE0450400690401 /* mainVC.swift in Sources */,
 				044795AA1FE1A49000EC1588 /* DataService.swift in Sources */,
 				042EA0E21FE0948A009B66A0 /* ButtonRadius.swift in Sources */,
@@ -346,6 +357,7 @@
 				044EA5E11FE0445F00690401 /* SWRevealViewController.m in Sources */,
 				044EA5EE1FE0511400690401 /* Constants.swift in Sources */,
 				042EA0EA1FE1248A009B66A0 /* CircleImage.swift in Sources */,
+				044795AF1FE1D85600EC1588 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

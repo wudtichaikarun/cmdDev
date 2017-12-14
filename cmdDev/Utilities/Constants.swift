@@ -12,7 +12,7 @@ typealias CompletionHandeler = (_ Success: Bool) -> ()
 
 // heroku url
 //let BASE_URL = "https://cmddev.herokuapp.com/v1/"
-let BASE_URL = "https://cmddiv.herokuapp.com/v1/"
+let BASE_URL = "https://cmddev.herokuapp.com/v1/"
 let REGISTER_URL = "\(BASE_URL)account/register"
 let LOGIN_URL = "\(BASE_URL)account/login"
 let USER_ADD_URL = "\(BASE_URL)user/add"
