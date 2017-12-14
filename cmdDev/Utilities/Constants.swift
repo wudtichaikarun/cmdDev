@@ -18,6 +18,7 @@ let LOGIN_URL = "\(BASE_URL)account/login"
 let USER_ADD_URL = "\(BASE_URL)user/add"
 let USER_BY_EMAIL_URL = "\(BASE_URL)user/byEmail/"
 let CATEGORY_GET_URL = "\(BASE_URL)category/"
+let COMMAND_GET_URL = "\(BASE_URL)command/byCategory/"
 
 // segues
 let ToLogin = "toLogin"

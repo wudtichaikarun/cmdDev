@@ -51,13 +51,26 @@ class mainVC: UIViewController {
   func updateWithCategory () {
     let categoryName = DataService.instance.selectedCategory?.categoryName ?? ""
     categoryNameLbl.text = "CmdDev #\(categoryName)"
+    getCommands()
   }
   
   func onLoginGetMessage () {
     DataService.instance.findAllCategory { (success) in
       if success {
-        
+        if DataService.instance.categorys.count > 0 {
+          DataService.instance.selectedCategory = DataService.instance.categorys[0]
+          self.updateWithCategory()
+        } else {
+          self.categoryNameLbl.text = "No category!"
+        }
       }
+    }
+  }
+  
+  func getCommands () {
+    guard let catId = DataService.instance.selectedCategory?.categoryId else { return }
+    DataService.instance.findAllCommandForMain(categoryId: catId) { (success) in
+      // dosomething
     }
   }
   

@@ -15,6 +15,7 @@ class DataService {
   static let instance = DataService()
   
   var categorys = [Category]()
+  var commands = [Command]()
   var selectedCategory : Category?
   
   func findAllCategory (completion: @escaping CompletionHandeler) {
@@ -38,6 +39,44 @@ class DataService {
         debugPrint(response.result.error as Any)
       }
     }
+  }
+  
+  func findAllCommandForMain (categoryId: String, completion: @escaping CompletionHandeler) {
+    Alamofire.request(
+      "\(COMMAND_GET_URL)\(categoryId)",
+      method: .get,
+      parameters: nil,
+      encoding: JSONEncoding.default,
+      headers: HEADER_WITH_TOKEN
+      ).responseJSON { (response) in
+        if response.result.error == nil {
+          self.clearCommands()
+          guard let data = response.data else { return }
+          if let json = JSON(data: data).array {
+            for item in json {
+              let commandId = item["_id"].stringValue
+              let commandKey = item["cmdKey"].stringValue
+              let commandDesc = item["cmdDescription"].stringValue
+              let categoryId = item["categoryId"].stringValue
+              let userCreateId = item["userCreateId"].stringValue
+              
+              let command = Command(cmdId: commandId, cmdKey: commandKey, cmdDescription: commandDesc, categoryId: categoryId, userCreateId: userCreateId)
+              
+              self.commands.append(command)
+            }
+            print(self.commands)
+            completion(true)
+          }
+
+        } else {
+          debugPrint(response.result.error as Any)
+          completion(false)
+        }
+    }
+  }
+  
+  func clearCommands() {
+    commands.removeAll()
   }
   
   func clearCategory () {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042E08031FE2ADE400BEE1BD /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E08021FE2ADE400BEE1BD /* Command.swift */; };
 		042EA0DD1FE059D3009B66A0 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */; };
 		042EA0E01FE089F7009B66A0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0DF1FE089F7009B66A0 /* AuthService.swift */; };
 		042EA0E21FE0948A009B66A0 /* ButtonRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042E08021FE2ADE400BEE1BD /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		042EA0DC1FE059D3009B66A0 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		042EA0DF1FE089F7009B66A0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		042EA0E11FE0948A009B66A0 /* ButtonRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRadius.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				044795AC1FE1A4FB00EC1588 /* Category.swift */,
+				042E08021FE2ADE400BEE1BD /* Command.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				044795B91FE2682500EC1588 /* SocketService.swift in Sources */,
 				042EA0E01FE089F7009B66A0 /* AuthService.swift in Sources */,
 				044EA5E11FE0445F00690401 /* SWRevealViewController.m in Sources */,
+				042E08031FE2ADE400BEE1BD /* Command.swift in Sources */,
 				044EA5EE1FE0511400690401 /* Constants.swift in Sources */,
 				042EA0EA1FE1248A009B66A0 /* CircleImage.swift in Sources */,
 				044795AF1FE1D85600EC1588 /* CategoryCell.swift in Sources */,
