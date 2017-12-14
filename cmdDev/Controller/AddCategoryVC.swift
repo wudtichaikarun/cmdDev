@@ -24,6 +24,12 @@ class AddCategoryVC: UIViewController {
   }
   
   @IBAction func btnCreateCategoryClick(_ sender: Any) {
+    guard let categoryName = catNameText.text, catNameText.text != "" else { return }
+    SocketService.instance.addCategory(categoryName: categoryName) { (success) in
+      if success {
+        self.dismiss(animated: true, completion: nil)
+      }
+    }
   }
   
   func setUpView() {

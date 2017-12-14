@@ -22,6 +22,7 @@
 		044795AF1FE1D85600EC1588 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044795AE1FE1D85600EC1588 /* CategoryCell.swift */; };
 		044795B61FE242F900EC1588 /* AddCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044795B41FE242F900EC1588 /* AddCategoryVC.swift */; };
 		044795B71FE242F900EC1588 /* AddCategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044795B51FE242F900EC1588 /* AddCategoryVC.xib */; };
+		044795B91FE2682500EC1588 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044795B81FE2682400EC1588 /* SocketService.swift */; };
 		044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CB1FE042E100690401 /* AppDelegate.swift */; };
 		044EA5CE1FE042E100690401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA5CD1FE042E100690401 /* ViewController.swift */; };
 		044EA5D11FE042E100690401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044EA5CF1FE042E100690401 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		044795AE1FE1D85600EC1588 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		044795B41FE242F900EC1588 /* AddCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryVC.swift; sourceTree = "<group>"; };
 		044795B51FE242F900EC1588 /* AddCategoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddCategoryVC.xib; path = ../Controller/AddCategoryVC.xib; sourceTree = "<group>"; };
+		044795B81FE2682400EC1588 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		044EA5C81FE042E100690401 /* cmdDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cmdDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044EA5CB1FE042E100690401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044EA5CD1FE042E100690401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				042EA0DF1FE089F7009B66A0 /* AuthService.swift */,
 				042EA0E31FE0EE22009B66A0 /* UserDataService.swift */,
 				044795A91FE1A49000EC1588 /* DataService.swift */,
+				044795B81FE2682400EC1588 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				042EA0E41FE0EE22009B66A0 /* UserDataService.swift in Sources */,
 				044EA5CC1FE042E100690401 /* AppDelegate.swift in Sources */,
 				042EA0DD1FE059D3009B66A0 /* RegisterVC.swift in Sources */,
+				044795B91FE2682500EC1588 /* SocketService.swift in Sources */,
 				042EA0E01FE089F7009B66A0 /* AuthService.swift in Sources */,
 				044EA5E11FE0445F00690401 /* SWRevealViewController.m in Sources */,
 				044EA5EE1FE0511400690401 /* Constants.swift in Sources */,

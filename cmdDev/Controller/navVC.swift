@@ -22,6 +22,13 @@ class navVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
     NotificationCenter.default.addObserver(self, selector: #selector(navVC.userDataChange(_:)), name: NOTIF_USER_DATA_CHANGE, object: nil)
+    
+    SocketService.instance.getCategory { (success) in
+      if success {
+        self.tableView.reloadData()
+      }
+    }
+    
   }
   
   override func viewDidAppear(_ animated: Bool) {
