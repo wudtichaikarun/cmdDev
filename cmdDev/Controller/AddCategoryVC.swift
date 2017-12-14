@@ -14,10 +14,10 @@ class AddCategoryVC: UIViewController {
   @IBOutlet weak var bgView: UIView!
   
   
-    override func viewDidLoad() {
-      super.viewDidLoad()
-      setUpView()
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setUpView()
+  }
   
   @IBAction func btnCloseModalClick(_ sender: Any) {
     dismiss(animated: true, completion: nil)

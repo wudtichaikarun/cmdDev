@@ -48,6 +48,16 @@ class mainVC: UIViewController {
     updateWithCategory()
   }
   
+  
+  @IBAction func btnCreateCmdClick(_ sender: Any) {
+    if AuthService.instance.isLogggedIn {
+      let addCommand = AddCommand()
+      addCommand.modalPresentationStyle = .custom
+      present(addCommand, animated: true, completion: nil)
+    }
+  }
+  
+  
   func updateWithCategory () {
     let categoryName = DataService.instance.selectedCategory?.categoryName ?? ""
     categoryNameLbl.text = "CmdDev #\(categoryName)"

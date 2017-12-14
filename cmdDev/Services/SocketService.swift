@@ -44,4 +44,10 @@ class SocketService: NSObject {
     }
   }
   
+  func addCommand(cmdKey: String, cmdDescription: String, categoryId: String, completion: @escaping CompletionHandeler) {
+    let userCreateId = UserDataService.instance.id
+    socket.emit("newCommand", cmdKey, cmdDescription, categoryId, userCreateId)
+    completion(true)
+  }
+  
 }
