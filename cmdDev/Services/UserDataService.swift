@@ -69,6 +69,7 @@ class UserDataService {
     AuthService.instance.isLogggedIn = false
     AuthService.instance.userEmail = ""
     AuthService.instance.authToken = ""
+    DataService.instance.clearCategory()
   }
   
 }

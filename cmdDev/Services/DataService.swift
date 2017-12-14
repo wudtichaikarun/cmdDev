@@ -15,6 +15,7 @@ class DataService {
   static let instance = DataService()
   
   var categorys = [Category]()
+  var selectedCategory : Category?
   
   func findAllCategory (completion: @escaping CompletionHandeler) {
     Alamofire.request(CATEGORY_GET_URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER_WITH_TOKEN).responseJSON { (response) in
@@ -28,7 +29,8 @@ class DataService {
             
             self.categorys.append(category)
           }
-          print(self.categorys[0].categoryName)
+          //print(self.categorys[0].categoryName)
+          NotificationCenter.default.post(name: NOTIF_CATEGORY_LOADED, object: nil)
           completion(true)
         }
         
@@ -36,6 +38,10 @@ class DataService {
         debugPrint(response.result.error as Any)
       }
     }
+  }
+  
+  func clearCategory () {
+    categorys.removeAll()
   }
   
 }

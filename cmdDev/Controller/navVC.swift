@@ -21,7 +21,10 @@ class navVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     tableView.dataSource = self
     
     self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
+    
     NotificationCenter.default.addObserver(self, selector: #selector(navVC.userDataChange(_:)), name: NOTIF_USER_DATA_CHANGE, object: nil)
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(navVC.categoryLoaded(_:)), name: NOTIF_CATEGORY_LOADED, object: nil)
     
     SocketService.instance.getCategory { (success) in
       if success {
@@ -38,11 +41,17 @@ class navVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   @objc func userDataChange(_ notif: Notification) {
     setUpUserInfo()
   }
+  
+  @objc func categoryLoaded (_ notif: Notification) {
+    tableView.reloadData()
+  }
 
   @IBAction func btnAddCategoryClick(_ sender: Any) {
-    let addCategory = AddCategoryVC()
-    addCategory.modalPresentationStyle = .custom
-    present(addCategory, animated: true, completion: nil)
+    if AuthService.instance.isLogggedIn {
+      let addCategory = AddCategoryVC()
+      addCategory.modalPresentationStyle = .custom
+      present(addCategory, animated: true, completion: nil)
+    }
   }
   
   @IBAction func btnLoginClick(_ sender: Any) {
@@ -65,6 +74,7 @@ class navVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
       btnLogin.setTitle("Login", for: .normal)
       userImage.image = UIImage(named: "menuProfileIcon")
       userImage.backgroundColor = UIColor.clear
+      tableView.reloadData()
     }
   }
   
@@ -84,6 +94,13 @@ class navVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return DataService.instance.categorys.count
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let category = DataService.instance.categorys[indexPath.row]
+    DataService.instance.selectedCategory = category
+    NotificationCenter.default.post(name: NOTIF_CATEGORY_SELECTED, object: nil)
+    self.revealViewController().revealToggle(animated: true)
   }
   
   

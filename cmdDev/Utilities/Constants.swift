@@ -32,6 +32,8 @@ let USER_EMAIL = "userEmail"
 
 // notification
 let NOTIF_USER_DATA_CHANGE = Notification.Name("notifUserDataChange")
+let NOTIF_CATEGORY_LOADED = Notification.Name("categorysLoaded")
+let NOTIF_CATEGORY_SELECTED = Notification.Name("categorySelected")
 
 // http header
 let HTTP_HEADER = [

@@ -82,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="btnMenu" destination="FPi-mQ-zhX" id="8lR-7f-Xaj"/>
+                        <outlet property="categoryNameLbl" destination="Hj0-fv-fc9" id="PkK-3J-hiR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfj-SB-ic8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,10 +121,10 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-De-ZzQ">
-                                <rect key="frame" x="0.0" y="130" width="375" height="250"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="444"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="CM4-De-ZzQ" secondAttribute="height" multiplier="3:2" id="LoR-Jl-YKI"/>
+                                    <constraint firstAttribute="width" secondItem="CM4-De-ZzQ" secondAttribute="height" multiplier="125:148" id="MDS-aO-W8H"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="60" id="te7-Mp-XpX" customClass="CategoryCell" customModule="cmdDev" customModuleProvider="target">
