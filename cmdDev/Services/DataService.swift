@@ -64,7 +64,7 @@ class DataService {
               
               self.commands.append(command)
             }
-            print(self.commands)
+            // print(self.commands)
             completion(true)
           }
 

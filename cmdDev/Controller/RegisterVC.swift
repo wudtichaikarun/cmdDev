@@ -23,10 +23,14 @@ class RegisterVC: UIViewController {
   var bgColor : UIColor?
   
   @IBOutlet weak var spinner: UIActivityIndicatorView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    let tap = UITapGestureRecognizer(target: self, action: #selector(RegisterVC.handleTap))
+
     spinner.isHidden = true
+    
+    // call func close keyboard
+    let tap = UITapGestureRecognizer(target: self, action: #selector(RegisterVC.handleTap))
     view.addGestureRecognizer(tap)
   }
   
@@ -45,10 +49,12 @@ class RegisterVC: UIViewController {
     }
   }
   
+  // close register page
   @IBAction func btnClose(_ sender: Any) {
     performSegue(withIdentifier: Unwind, sender: nil)
   }
   
+  // open imagePicker page
   @IBAction func chooseImg(_ sender: Any) {
     performSegue(withIdentifier: ToImagePicker, sender: nil)
   }

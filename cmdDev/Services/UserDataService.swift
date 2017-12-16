@@ -17,6 +17,7 @@ class UserDataService {
   public private(set) var email = ""
   public private(set) var name = ""
   
+  // set user data
   func setUserData (id: String, imgName: String, imgColor: String, email: String, name: String) {
     self.id = id
     self.imgName = imgName
@@ -60,6 +61,7 @@ class UserDataService {
     return newUIColor
   }
   
+  // logout
   func logOut() {
     id = ""
     imgName = ""

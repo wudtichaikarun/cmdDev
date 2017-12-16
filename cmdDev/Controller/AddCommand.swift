@@ -19,21 +19,34 @@ class AddCommand: UIViewController {
   }
   
   func setUpView() {
+    // call close modal func
     let closeTouch = UITapGestureRecognizer(target: self, action: #selector(AddCommand.closeTap(_:)))
     bgView.addGestureRecognizer(closeTouch)
     
+    // call close keyboard func
+     let tap = UITapGestureRecognizer(target: self, action: #selector(AddCommand.handleTap))
+    view.addGestureRecognizer(tap)
+    
+    // add place holder to textView
     cmdDescriptionText.placeholder = "Description"
   }
   
+  // close keyboard func
+  @objc func handleTap() {
+    view.endEditing(true)
+  }
+  
+  // close modal func
   @objc func closeTap (_ recognizer: UITapGestureRecognizer) {
     dismiss(animated: true, completion: nil)
   }
   
+  // cloe modal by btn
   @IBAction func btnCloseModalClick(_ sender: Any) {
     dismiss(animated: true, completion: nil)
   }
   
-
+  // btn create command
   @IBAction func btnCreateCommandClick(_ sender: Any) {
     if AuthService.instance.isLogggedIn {
       guard let categoryId = DataService.instance.selectedCategory?.categoryId else { return }

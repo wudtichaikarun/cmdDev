@@ -13,11 +13,17 @@ class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   @IBOutlet weak var btnMenu: UIButton!
   @IBOutlet weak var categoryNameLbl: UILabel!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var activityView: UIActivityIndicatorView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.delegate = self
     tableView.dataSource = self
+    
+    if AuthService.instance.isLogggedIn {
+      activityView.isHidden = false
+      activityView.startAnimating()
+    }
     
     tableView.estimatedRowHeight = 80
     tableView.rowHeight = UITableViewAutomaticDimension
@@ -100,6 +106,8 @@ class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     DataService.instance.findAllCommandForMain(categoryId: catId) { (success) in
       if success {
         self.tableView.reloadData()
+        self.activityView.isHidden = true
+        self.activityView.stopAnimating()
       }
     }
   }

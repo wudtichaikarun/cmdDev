@@ -16,6 +16,7 @@ class AuthService {
   
   let defaults = UserDefaults.standard
   
+  // get set login status
   var isLogggedIn : Bool {
     get {
       return defaults.bool(forKey: LOGGED_IN_KEY)
@@ -25,6 +26,7 @@ class AuthService {
     }
   }
   
+  // get set token
   var authToken: String {
     get {
       return defaults.value(forKey: TOKEN_KEY) as! String
@@ -34,6 +36,7 @@ class AuthService {
     }
   }
   
+  // get set user email
   var userEmail: String {
     get {
       return defaults.value(forKey: USER_EMAIL) as! String
@@ -143,6 +146,7 @@ class AuthService {
     }
   }
   
+  // find user by email
   func findUserByEmail (completion: @escaping CompletionHandeler) {
     Alamofire.request(
       "\(USER_BY_EMAIL_URL)\(userEmail)",
@@ -163,6 +167,7 @@ class AuthService {
     }
   }
 
+  // set user information
   func setUserInfo (data: Data) {
     let json = JSON(data: data)
     let id = json["_id"].stringValue
